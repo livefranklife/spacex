@@ -90,6 +90,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </button>
           </div>
         </div>
+        <div className="header-strip">
+          <span className="header-strip-label">Rocket insight</span>
+          <span className="header-strip-text">
+            Starship, Falcon 9 and Falcon Heavy data shown here is for a live‑style
+            mission dashboard demo built in React.
+          </span>
+        </div>
       </header>
 
       <main className="main-shell">{children}</main>
