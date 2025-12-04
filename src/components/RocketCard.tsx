@@ -32,31 +32,31 @@ const RocketCard: React.FC<Props> = ({ rocket }) => {
       </div>
 
       <div style={{ display: "flex", gap: 18, alignItems: "center" }}>
-        <div
-          style={{
-            position: "relative",
-            width: 60,
-            height: 160,
-            borderRadius: 999,
-            background:
-              "linear-gradient(to top, rgba(15,23,42,0.9), rgba(15,23,42,0.6))",
-            border: "1px solid rgba(148,163,184,0.65)",
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
           <div
             style={{
-              width: "55%",
-              height: "60%",
+              position: "relative",
+              width: 60,
+              height: 160,
               borderRadius: 999,
               background:
-                "linear-gradient(160deg, #e5e7eb, #cbd5f5 40%, #22d3ee 80%)",
-              boxShadow: "0 18px 40px rgba(15,23,42,0.95)",
+                "linear-gradient(to top, rgba(24,24,31,0.95), rgba(17,17,24,0.7))",
+              border: "1px solid rgba(148,163,184,0.65)",
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
+              overflow: "hidden",
             }}
-          />
+          >
+            <div
+              style={{
+                width: "55%",
+                height: "60%",
+                borderRadius: 999,
+                background:
+                  "linear-gradient(160deg, #f9fafb, #e5e7eb 40%, #ec4899 80%)",
+                boxShadow: "0 18px 40px rgba(15,23,42,0.95)",
+              }}
+            />
           <div
             style={{
               position: "absolute",
