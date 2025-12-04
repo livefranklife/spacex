@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
               className="chip"
               style={{
                 borderRadius: "999px",
-                borderColor: "rgba(148, 163, 184, 0.75)",
+                borderColor: "rgba(255, 255, 255, 0.4)",
               }}
               onClick={() => navigate("/launches")}
             >
