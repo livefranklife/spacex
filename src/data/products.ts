@@ -20,24 +20,24 @@ export const TRENDING: Product[] = [
     id: "vintage-starship",
     name: "Vintage Starship Tee",
     price: 40,
-    category: "Mens",
+    category: "Starship",
     badge: "new",
   },
   {
     id: "schematic-hoodie",
     name: "Starlink Schematic Hoodie",
     price: 65,
-    category: "Mens",
+    category: "Falcon 9",
   },
 ];
 
 export const MENS: Product[] = [
-  ...TRENDING.filter((p) => p.category === "Mens"),
+  ...TRENDING.filter((p) => p.category === "Starship"),
   {
     id: "track-jacket",
     name: "Orbital Track Jacket",
     price: 80,
-    category: "Mens",
+    category: "Starship",
     badge: "limited",
   },
 ];

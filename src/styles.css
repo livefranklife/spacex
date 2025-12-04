@@ -44,6 +44,33 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-shell::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(148, 163, 184, 0.08) 0, transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(56, 189, 248, 0.1) 0, transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(34, 197, 235, 0.12) 0, transparent 60%);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.app-shell::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.18) 0.5px, transparent 0);
+  background-size: 120px 120px;
+  opacity: 0.13;
+  animation: starfield 48s linear infinite;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .main-shell {
@@ -537,6 +564,42 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
+.metric-card {
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98));
+  border: 1px solid rgba(148, 163, 184, 0.55);
+}
+
+.metric-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 211, 238, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #22d3ee;
+  box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+  animation: pulse 1.4s infinite;
+}
+
 .skeleton {
   background: linear-gradient(
     90deg,
@@ -547,6 +610,30 @@ body {
   background-size: 200% 100%;
   animation: shimmer 1400ms infinite;
   border-radius: 999px;
+}
+
+@keyframes starfield {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-120px, -120px, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(34, 211, 238, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
+  }
 }
 
 @keyframes shimmer {

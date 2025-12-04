@@ -1,8 +1,10 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import PageTransition from "./components/PageTransition";
-import ProductCard from "./components/ProductCard";
-import { ALL_PRODUCTS } from "./data/products";
+import LaunchCard from "./components/LaunchCard";
+import RocketCard from "./components/RocketCard";
+import { ALL_LAUNCHES } from "./data/launches";
+import { ROCKETS } from "./data/rockets";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -13,9 +15,20 @@ const SearchPage: React.FC = () => {
   const q = query.get("q")?.toLowerCase() ?? "";
   const navigate = useNavigate();
 
-  const results = ALL_PRODUCTS.filter((p) =>
-    p.name.toLowerCase().includes(q)
+  const matchingLaunches = ALL_LAUNCHES.filter(
+    (launch) =>
+      launch.name.toLowerCase().includes(q) ||
+      launch.vehicle.toLowerCase().includes(q) ||
+      launch.site.toLowerCase().includes(q)
   );
+
+  const matchingRockets = ROCKETS.filter(
+    (rocket) =>
+      rocket.name.toLowerCase().includes(q) ||
+      rocket.family.toLowerCase().includes(q)
+  );
+
+  const hasQuery = q.trim().length > 0;
 
   return (
     <PageTransition>
@@ -23,33 +36,42 @@ const SearchPage: React.FC = () => {
         <div>
           <p className="section-eyebrow">Search</p>
           <h1 className="section-title">
-            {q ? `Results for “${q}”` : "Try searching for “Starbase”"}
+            {hasQuery ? `Results for “${q}”` : "Search missions or rockets"}
           </h1>
         </div>
-        <button className="subtle-link" onClick={() => navigate("/trending")}>
-          Browse trending instead →
+        <button className="subtle-link" onClick={() => navigate("/launches")}>
+          Browse launches instead →
         </button>
       </header>
 
-      {q && results.length === 0 && (
-        <p style={{ color: "var(--muted)" }}>No matches found.</p>
+      {hasQuery && matchingLaunches.length === 0 && matchingRockets.length === 0 && (
+        <p style={{ color: "var(--muted)" }}>No missions or vehicles matched.</p>
       )}
 
-      {results.length > 0 && (
-        <div className="products-grid">
-          {results.map((p) => (
-            <ProductCard
-              key={p.id}
-              product={p}
-              onClick={() => navigate(`/product/${p.id}`)}
-            />
-          ))}
-        </div>
+      {matchingRockets.length > 0 && (
+        <section style={{ marginBottom: 24 }}>
+          <p className="section-eyebrow">Rockets</p>
+          <div className="products-grid">
+            {matchingRockets.map((rocket) => (
+              <RocketCard key={rocket.id} rocket={rocket} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {matchingLaunches.length > 0 && (
+        <section>
+          <p className="section-eyebrow">Launches</p>
+          <div className="products-grid">
+            {matchingLaunches.map((launch) => (
+              <LaunchCard key={launch.id} launch={launch} />
+            ))}
+          </div>
+        </section>
       )}
     </PageTransition>
   );
 };
 
 export default SearchPage;
-
 

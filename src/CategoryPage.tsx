@@ -16,12 +16,12 @@ type Props = {
 };
 
 const map = {
-  trending: { title: "Trending", data: TRENDING },
-  mens: { title: "Mens", data: MENS },
-  womens: { title: "Womens", data: WOMENS },
-  kids: { title: "Kids", data: KIDS },
-  accessories: { title: "Accessories", data: ACCESSORIES },
-  flight: { title: "Flight Shirts", data: FLIGHT_SHIRTS },
+  trending: { title: "Highlights", data: TRENDING },
+  mens: { title: "Starship gear", data: MENS },
+  womens: { title: "Crew gear", data: WOMENS },
+  kids: { title: "Future crew", data: KIDS },
+  accessories: { title: "Mission accessories", data: ACCESSORIES },
+  flight: { title: "Flight shirts", data: FLIGHT_SHIRTS },
 };
 
 const CategoryPage: React.FC<Props> = ({ type }) => {

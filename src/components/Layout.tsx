@@ -18,57 +18,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             aria-label="Go to home"
           >
             <span className="nav-logo-mark" />
-            <span>ORBITAL SUPPLY</span>
+            <span>ORBITAL LAUNCH</span>
           </button>
 
           <nav className="nav-links" aria-label="Primary navigation">
             <NavLink
-              to="/trending"
+              to="/"
+              end
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
             >
-              Trending
+              Overview
             </NavLink>
             <NavLink
-              to="/mens"
+              to="/rockets"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
             >
-              Mens
-            </NavLink>
-            <NavLink
-              to="/womens"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "nav-link-active" : ""}`
-              }
-            >
-              Womens
-            </NavLink>
-            <NavLink
-              to="/kids"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "nav-link-active" : ""}`
-              }
-            >
-              Kids
-            </NavLink>
-            <NavLink
-              to="/accessories"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "nav-link-active" : ""}`
-              }
-            >
-              Accessories
-            </NavLink>
-            <NavLink
-              to="/flight-shirts"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "nav-link-active" : ""}`
-              }
-            >
-              Flight Shirts
+              Rockets
             </NavLink>
             <NavLink
               to="/launches"
@@ -78,13 +47,29 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             >
               Launches
             </NavLink>
+            <NavLink
+              to="/launches?tab=recent"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "nav-link-active" : ""}`
+              }
+            >
+              Mission Log
+            </NavLink>
+            <NavLink
+              to="/faq"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "nav-link-active" : ""}`
+              }
+            >
+              FAQ
+            </NavLink>
           </nav>
 
           <div className="nav-right">
             <div className="nav-search">
               <span className="nav-search-icon">⌕</span>
               <input
-                placeholder="Search orbital gear"
+                placeholder="Search missions"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
                     navigate(
@@ -98,11 +83,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <button
               className="pill-button"
-              onClick={() => navigate("/cart")}
-              aria-label="Open cart"
+              onClick={() => navigate("/launches")}
+              aria-label="Open launch schedule"
             >
-              <span>Cart</span>
-              <span style={{ fontSize: "0.8rem" }}>0</span>
+              <span>Launch schedule</span>
             </button>
           </div>
         </div>
@@ -113,13 +97,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <footer className="footer">
         <div className="footer-inner">
           <div>
-            <div className="footer-title">Newsletter</div>
+            <div className="footer-title">Mission updates</div>
             <div className="footer-headline">
               Stay ahead of the next launch window.
             </div>
             <p className="footer-copy">
-              Be the first to know when limited‑run flight shirts, mission
-              patches and collectibles drop.
+              Subscribe for launch schedules, vehicle milestones and recovery
+              summaries across the Starship and Falcon fleets.
             </p>
           </div>
           <div>
