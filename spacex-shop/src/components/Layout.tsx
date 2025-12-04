@@ -35,8 +35,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
-            >
-              Mens
+            >Vehicles
+              
             </NavLink>
             <NavLink
               to="/Human Spaceflight"
@@ -44,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
             >
-              Womens
+             Spaceflight 
             </NavLink>
             <NavLink
               to="/Rideshare"
@@ -52,7 +52,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
             >
-              Kids
+              Rideshare
             </NavLink>
             <NavLink
               to="/accessories"
