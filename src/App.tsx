@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 import Layout from "./components/Layout";
 import HomePage from "./HomePage";
 import FAQPage from "./FAQPage";
@@ -16,18 +15,16 @@ const App: React.FC = () => {
 
   return (
     <Layout>
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/launches" element={<LaunchesPage />} />
-          <Route path="/launches/:id" element={<LaunchDetailPage />} />
-          <Route path="/rockets" element={<RocketsPage />} />
-          <Route path="/rockets/:id" element={<RocketDetailPage />} />
-          <Route path="/faq" element={<FAQPage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/launches" element={<LaunchesPage />} />
+        <Route path="/launches/:id" element={<LaunchDetailPage />} />
+        <Route path="/rockets" element={<RocketsPage />} />
+        <Route path="/rockets/:id" element={<RocketDetailPage />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </Layout>
   );
 };
