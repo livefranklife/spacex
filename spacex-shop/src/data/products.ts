@@ -20,24 +20,24 @@ export const TRENDING: Product[] = [
     id: "vintage-starship",
     name: "Vintage Starship Tee",
     price: 40,
-    category: "Mens",
+    category: "Vehicles",
     badge: "new",
   },
   {
     id: "schematic-hoodie",
     name: "Starlink Schematic Hoodie",
     price: 65,
-    category: "Mens",
+    category: "Vehicles",
   },
 ];
 
 export const MENS: Product[] = [
-  ...TRENDING.filter((p) => p.category === "Mens"),
+  ...TRENDING.filter((p) => p.category === "Vehicles"),
   {
     id: "track-jacket",
     name: "Orbital Track Jacket",
     price: 80,
-    category: "Mens",
+    category: "Vehicles",
     badge: "limited",
   },
 ];
@@ -47,7 +47,7 @@ export const WOMENS: Product[] = [
     id: "starbase-tank",
     name: "Starbase City Tank Top",
     price: 35,
-    category: "Womens",
+    category: "Spaceflight",
   },
 ];
 
@@ -56,7 +56,7 @@ export const KIDS: Product[] = [
     id: "kids-starbase",
     name: "Kid's Starbase Tee",
     price: 25,
-    category: "Kids",
+    category: "Rideshare",
   },
 ];
 

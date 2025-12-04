@@ -97,23 +97,23 @@ const HomePage: React.FC = () => {
 
       <section aria-label="Explore categories">
         <div className="section-header">
-          <p className="section-eyebrow">Categories</p>
-          <button className="subtle-link" onClick={() => navigate("/mens")}>
-            Explore orbit wardrobe →
+          <p className="section-eyebrow">Explore</p>
+          <button className="subtle-link" onClick={() => navigate("/Vehicles")}>
+            View all vehicles →
           </button>
         </div>
         <div className="chips-row">
           <button className="chip chip-active" onClick={() => navigate("/trending")}>
             Trending
           </button>
-          <button className="chip" onClick={() => navigate("/mens")}>
-            Mens
+          <button className="chip" onClick={() => navigate("/Vehicles")}>
+            Vehicles
           </button>
-          <button className="chip" onClick={() => navigate("/womens")}>
-            Womens
+          <button className="chip" onClick={() => navigate("/Human Spaceflight")}>
+            Spaceflight
           </button>
-          <button className="chip" onClick={() => navigate("/kids")}>
-            Kids
+          <button className="chip" onClick={() => navigate("/Rideshare")}>
+            Rideshare
           </button>
           <button className="chip" onClick={() => navigate("/accessories")}>
             Accessories

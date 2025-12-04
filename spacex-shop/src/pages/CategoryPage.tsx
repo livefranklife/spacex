@@ -12,14 +12,14 @@ import {
 } from "../data/products";
 
 type Props = {
-  type: "trending" | "mens" | "womens" | "kids" | "accessories" | "flight";
+  type: "trending" | "vehicles" | "spaceflight" | "rideshare" | "accessories" | "flight";
 };
 
 const map = {
   trending: { title: "Trending", data: TRENDING },
-  mens: { title: "Mens", data: MENS },
-  womens: { title: "Womens", data: WOMENS },
-  kids: { title: "Kids", data: KIDS },
+  vehicles: { title: "Vehicles", data: MENS },
+  spaceflight: { title: "Spaceflight", data: WOMENS },
+  rideshare: { title: "Rideshare", data: KIDS },
   accessories: { title: "Accessories", data: ACCESSORIES },
   flight: { title: "Flight Shirts", data: FLIGHT_SHIRTS },
 };
