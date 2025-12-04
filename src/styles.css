@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 :root {
-  /* Grey / white / pink theme */
-  --bg: #050608;
-  --bg-alt: #111118;
-  --card: rgba(24, 24, 31, 0.96);
-  --accent: #ec4899; /* pink */
-  --accent-soft: rgba(236, 72, 153, 0.22);
-  --accent-strong: #f472b6;
+  /* Mars-inspired theme: dark space + warm reds/oranges */
+  --bg: #050308;
+  --bg-alt: #14070a;
+  --card: rgba(24, 19, 22, 0.96);
+  --accent: #f97316; /* Mars orange */
+  --accent-soft: rgba(249, 115, 22, 0.22);
+  --accent-strong: #fed7aa;
   --text: #f9fafb; /* white */
   --muted: #9ca3af; /* grey */
   --border-subtle: rgba(148, 163, 184, 0.28);
@@ -31,7 +31,7 @@ body,
   margin: 0;
   padding: 0;
   height: 100%;
-  background: radial-gradient(circle at top left, #050608 0, #020204 48%, #000 100%);
+  background: radial-gradient(circle at top left, #050308 0, #020104 48%, #000 100%);
   color: var(--text);
   font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
@@ -54,9 +54,9 @@ body {
   position: fixed;
   inset: -20%;
   background-image:
-    radial-gradient(circle at 10% 20%, rgba(156, 163, 175, 0.12) 0, transparent 55%),
-    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.28) 0, transparent 60%),
-    radial-gradient(circle at 50% 100%, rgba(236, 72, 153, 0.18) 0, transparent 60%);
+    radial-gradient(circle at 10% 20%, rgba(156, 163, 175, 0.14) 0, transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.3) 0, transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(248, 113, 22, 0.2) 0, transparent 60%);
   opacity: 0.9;
   pointer-events: none;
   z-index: -2;
@@ -147,8 +147,8 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  background: radial-gradient(circle at 30% 0, #f9fafb 0, #ec4899 22%, #1f2933 75%);
-  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.6), 0 8px 24px rgba(15, 23, 42, 0.9);
+  background: radial-gradient(circle at 30% 0, #f9fafb 0, #f97316 22%, #1f2933 75%);
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.6), 0 8px 24px rgba(15, 23, 42, 0.9);
   position: relative;
   overflow: hidden;
 }
@@ -249,14 +249,14 @@ body {
 .pill-button {
   border-radius: 999px;
   padding: 7px 14px;
-  background: radial-gradient(circle at top left, #ec4899, #f9a8d4);
+  background: radial-gradient(circle at top left, #f97316, #fed7aa);
   border: none;
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #1f2933;
   font-weight: 600;
-  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.55);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.55);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -268,12 +268,12 @@ body {
 .pill-button:hover {
   transform: translateY(-1px) translateZ(0) scale(1.02);
   filter: brightness(1.07);
-  box-shadow: 0 16px 40px rgba(236, 72, 153, 0.7);
+  box-shadow: 0 16px 40px rgba(249, 115, 22, 0.7);
 }
 
 .footer {
   border-top: 1px solid rgba(148, 163, 184, 0.35);
-  background: radial-gradient(circle at top, rgba(10, 10, 14, 0.98), #050608 55%, #000);
+  background: radial-gradient(circle at top, rgba(10, 8, 12, 0.98), #050308 55%, #000);
   padding: 32px 24px 28px;
 }
 
@@ -442,8 +442,8 @@ body {
   position: absolute;
   inset: -60%;
   background:
-    radial-gradient(circle at 0% 0%, rgba(236, 72, 153, 0.28), transparent 60%),
-    radial-gradient(circle at 100% 0%, rgba(244, 114, 182, 0.2), transparent 65%);
+    radial-gradient(circle at 0% 0%, rgba(249, 115, 22, 0.28), transparent 60%),
+    radial-gradient(circle at 100% 0%, rgba(248, 150, 30, 0.22), transparent 65%);
   opacity: 0;
   transition: opacity 220ms ease-out, transform 220ms ease-out;
   transform: translateY(12px);
@@ -486,7 +486,7 @@ body {
   position: relative;
   height: 170px;
   border-radius: 14px;
-  background: radial-gradient(circle at top, #ec4899 0, #18181b 50%, #020204 100%);
+  background: radial-gradient(circle at top, #f97316 0, #18181b 50%, #020104 100%);
   overflow: hidden;
   margin-bottom: 10px;
 }
@@ -516,7 +516,7 @@ body {
   width: 46%;
   aspect-ratio: 2.6/1;
   border-radius: 999px;
-  background: linear-gradient(110deg, #f9fafb, #e5e7eb 40%, #f97316 72%, #ec4899);
+  background: linear-gradient(110deg, #f9fafb, #e5e7eb 40%, #f97316 72%, #b91c1c);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-14deg);
@@ -569,8 +569,8 @@ body {
 .hero-card {
   border-radius: 22px;
   padding: 24px;
-  background: radial-gradient(circle at 0 0, rgba(236, 72, 153, 0.25), transparent 60%),
-    radial-gradient(circle at 100% 100%, rgba(248, 113, 170, 0.22), transparent 60%),
+  background: radial-gradient(circle at 0 0, rgba(248, 113, 22, 0.3), transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(127, 29, 29, 0.35), transparent 62%),
     linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
   border: 1px solid rgba(148, 163, 184, 0.5);
   box-shadow: 0 22px 60px rgba(15, 23, 42, 0.98);
