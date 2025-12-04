@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg: #050714;
-  --bg-alt: #080c1f;
-  --card: rgba(15, 22, 45, 0.95);
-  --accent: #22d3ee;
-  --accent-soft: rgba(34, 211, 238, 0.25);
-  --accent-strong: #4ade80;
+  /* Grey / white / pink theme */
+  --bg: #050608;
+  --bg-alt: #111118;
+  --card: rgba(24, 24, 31, 0.96);
+  --accent: #ec4899;
+  --accent-soft: rgba(236, 72, 153, 0.22);
+  --accent-strong: #f472b6;
   --text: #f9fafb;
   --muted: #9ca3af;
-  --border-subtle: rgba(148, 163, 184, 0.22);
+  --border-subtle: rgba(148, 163, 184, 0.28);
   --danger: #fb7185;
   --radius-lg: 18px;
   --radius-full: 999px;
@@ -97,8 +98,8 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  background: radial-gradient(circle at 30% 0, #e5e7eb 0, #22d3ee 20%, #0f172a 75%);
-  box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.44), 0 8px 24px rgba(15, 23, 42, 0.9);
+  background: radial-gradient(circle at 30% 0, #f9fafb 0, #ec4899 22%, #111827 75%);
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.6), 0 8px 24px rgba(15, 23, 42, 0.9);
   position: relative;
   overflow: hidden;
 }
