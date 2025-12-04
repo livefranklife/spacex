@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               Trending
             </NavLink>
             <NavLink
-              to="/mens"
+              to="/Vehicles"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
@@ -39,7 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               Mens
             </NavLink>
             <NavLink
-              to="/womens"
+              to="/Human Spaceflight"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
@@ -47,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               Womens
             </NavLink>
             <NavLink
-              to="/kids"
+              to="/Rideshare"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
