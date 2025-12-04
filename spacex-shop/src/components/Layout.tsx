@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               className={({ isActive }) =>
                 `nav-link ${isActive ? "nav-link-active" : ""}`
               }
-            >Vehicles
+            >
               
             </NavLink>
             <NavLink
