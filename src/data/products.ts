@@ -47,7 +47,7 @@ export const WOMENS: Product[] = [
     id: "starbase-tank",
     name: "Starbase City Tank Top",
     price: 35,
-    category: "Womens",
+    category: "Crew",
   },
 ];
 
@@ -56,7 +56,7 @@ export const KIDS: Product[] = [
     id: "kids-starbase",
     name: "Kid's Starbase Tee",
     price: 25,
-    category: "Kids",
+    category: "Future crew",
   },
 ];
 
